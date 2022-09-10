@@ -10,7 +10,6 @@
         android:text="Loading..."
         android:textSize="30dp"
         android:id="@+id/loading"
-        android:textColor="@color/black"
         />
     <TextView
         android:layout_width="wrap_content"

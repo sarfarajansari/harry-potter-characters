@@ -27,11 +27,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="50"
+            android:id="@+id/previous"
             android:text="previous"
             android:layout_marginRight="10dp"
             android:layout_below="@id/charactersRecView"/>
         <Button
             android:layout_width="wrap_content"
+            android:id="@+id/next"
             android:layout_height="match_parent"
             android:layout_weight="50"
             android:text="Next"

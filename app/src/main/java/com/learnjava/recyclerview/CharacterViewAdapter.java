@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -36,6 +37,10 @@ public class CharacterViewAdapter extends RecyclerView.Adapter<CharacterViewAdap
         holder.characterName.setText(character.getName());
         holder.itemImage.setImageBitmap(character.getImageBitmap());
 
+        if(character.getImageBitmap()==null){
+            new DownloadImageTask(character).execute();
+        }
+
 
     }
 
@@ -56,6 +61,39 @@ public class CharacterViewAdapter extends RecyclerView.Adapter<CharacterViewAdap
             super(itemView);
              itemImage = itemView.findViewById(R.id.itemImage);
             characterName = itemView.findViewById(R.id.name);
+        }
+    }
+
+    private class DownloadImageTask extends AsyncTask<String, String, Bitmap> {
+        Character character;
+
+        public DownloadImageTask(Character character) {
+            this.character = character;
+
+        }
+
+
+
+        @Override
+        protected Bitmap doInBackground(String... urls) {
+            Bitmap imageBitmap = null;
+
+
+            try{
+                InputStream in = new java.net.URL(character.getImageUrl()).openStream();
+                imageBitmap = BitmapFactory.decodeStream(in);
+            }
+            catch ( IOException e){
+                e.printStackTrace();
+            }
+            return imageBitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap imageBitmap) {
+            character.setImageBitmap(imageBitmap);
+            notifyDataSetChanged();
+            System.out.println("Fetched Image");
         }
     }
 

@@ -27,7 +27,6 @@ public class Character {
     private boolean isHogwartsStaff;
     private boolean isAlive;
 
-    private Thread thread;
 
 
     private Bitmap imageBitmap;
@@ -54,23 +53,8 @@ public class Character {
     }
 
 
-
-    public Thread loadImage(){
-        thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    InputStream in = new java.net.URL(imageUrl).openStream();
-                    imageBitmap = BitmapFactory.decodeStream(in);
-                }
-                catch ( IOException e){
-                    e.printStackTrace();
-                }
-            }
-        });
-        thread.start();
-        return thread;
-
+    public void setImageBitmap(Bitmap imageBitmap) {
+        this.imageBitmap = imageBitmap;
     }
 
     @Override
@@ -145,32 +129,6 @@ public class Character {
         return imageUrl;
     }
 
-
-    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-
-
-        public DownloadImageTask() {
-
-
-        }
-
-        protected Bitmap doInBackground(String... urls) {
-            String urldisplay = imageUrl;
-            Bitmap mIcon11 = null;
-            try {
-                InputStream in = new java.net.URL(urldisplay).openStream();
-                mIcon11 = BitmapFactory.decodeStream(in);
-            } catch (Exception e) {
-                Log.e("Error", e.getMessage());
-                e.printStackTrace();
-            }
-            return mIcon11;
-        }
-
-        protected void onPostExecute(Bitmap result) {
-            Character.this.imageBitmap = result;
-        }
-    }
 
 
 }
