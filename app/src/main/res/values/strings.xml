@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Harry Potter Characters</string>
+    <string name="harry_potter_api_url">https://hp-api.herokuapp.com/api/characters</string>
+
+</resources>
