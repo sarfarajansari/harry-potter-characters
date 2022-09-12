@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CharacterViewActivity">
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/imageCard"
         android:layout_width="wrap_content"
@@ -30,20 +29,25 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-
-    <com.google.android.material.card.MaterialCardView
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/imageCard"
+    android:layout_height="match_parent">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/imageCard"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:elevation="5dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/characterDetails"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -426,9 +430,21 @@
 
 
             </LinearLayout>
-        </ScrollView>
 
 
 
-    </com.google.android.material.card.MaterialCardView>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/characterDetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/ownership"/>
+    </RelativeLayout>
+</ScrollView>
+
 </RelativeLayout>
