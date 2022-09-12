@@ -2,11 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/characterItem"
+    android:id="@+id/characterItemParent"
+    android:clickable="true"
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardItem"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
@@ -21,6 +23,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:clickable="true"
+            android:id="@+id/characterItem"
             android:layout_height="match_parent">
 
             <ImageView

@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Harry Potter Characters</string>
     <string name="harry_potter_api_url">https://hp-api.herokuapp.com/api/characters</string>
+    <string name="no_image_available_url">https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6</string>
+
+
+    <dimen name="detailViewGap">10dp</dimen>
+    <dimen name="labelTextSize">12sp</dimen>
+    <dimen name="valueTextSize">16sp</dimen>
 
 </resources>

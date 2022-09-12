@@ -6,12 +6,12 @@
   "house": "Gryffindor",
   "dateOfBirth": "31-07-1980",
   "yearOfBirth": 1980,
-  "wizard": true,
+
   "ancestry": "half-blood",
   "eyeColour": "green",
   "hairColour": "black",
 
-
+  "wizard": true,
   "hogwartsStudent": true,
   "hogwartsStaff": false,
   "actor": "Daniel Radcliffe",

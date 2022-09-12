@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,17 +32,67 @@ public class MainActivity extends AppCompatActivity {
     private final int limit = 7;
     Button previous = null;
     Button next = null;
+    Intent intent;
+    public static MediaPlayer music;
+
+
+
+    public void playPause(){
+        if(music==null)return;
+
+        if(music.isPlaying()){
+            music.pause();
+        }
+        else{
+            music.start();
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.mute:
+                playPause();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 
+    class CharacterViewAdapterModified extends CharacterViewAdapter{
+        CharacterViewAdapterModified(Intent intent){
+            super(intent);
+
+        }
+        @Override
+        public void startCharacterViewActivity(){
+            startActivity(intent);
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading);
 
         new FetchData().execute();
+        intent = new Intent(MainActivity.this,CharacterViewActivity.class );
+
+
+
+
 
     }
+
+
 
     private void setButtons(){
         previous= findViewById(R.id.previous);
@@ -83,8 +138,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private CharacterViewAdapter setViewData(){
-        CharacterViewAdapter adapter = new CharacterViewAdapter();
+    private CharacterViewAdapterModified setViewData(){
+        CharacterViewAdapterModified adapter = new CharacterViewAdapterModified(intent);
         ArrayList<Character> charactersList = new ArrayList<>();
         for (int i = offset; i < offset + limit; i++) {
             Character character = allCharactersList.get(i);
@@ -100,6 +155,9 @@ public class MainActivity extends AppCompatActivity {
     private void initializeViewData() {
 
         setContentView(R.layout.activity_main);
+         music= MediaPlayer.create(MainActivity.this, R.raw.harry_potter);
+         music.setLooping(true);
+        music.start();
         setButtons();
         charactersRecView = findViewById(R.id.charactersRecView);
         charactersRecView.setAdapter(setViewData());

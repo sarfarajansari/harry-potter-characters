@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/drawable/arrow_white.xml" value="0.1" />
+        <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/layout/activity_character_view.xml" value="0.225" />
         <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/layout/activity_main.xml" value="0.1925925925925926" />
         <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/layout/characters_list_item.xml" value="0.32135416666666666" />
         <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/layout/contacts_list_item.xml" value="0.335" />
         <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/layout/loading.xml" value="0.32135416666666666" />
+        <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/layout/menu.xml" value="0.2601851851851852" />
+        <entry key="..\:/Programming/personal/androidStudioProjects/RecyclerView/app/src/main/res/menu/menu.xml" value="0.2601851851851852" />
       </map>
     </option>
   </component>

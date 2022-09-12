@@ -32,6 +32,10 @@ public class Character {
     private Bitmap imageBitmap;
 
 
+    public String getEmail() {
+        return email;
+    }
+
     public Character(String name, String imageUrl, String species, String gender, String house, String dateOfBirth, Boolean isWizard, String ancestry, String eyeColour, String hairColour, String actor, boolean isHogwartsStudent, boolean isHogwartsStaff, boolean isAlive) {
         this.name = name;
         this.imageUrl = imageUrl;

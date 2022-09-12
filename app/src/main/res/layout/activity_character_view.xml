@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharacterViewActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imageCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:paddingTop="5dp"
+        app:cardCornerRadius="8dp">
+
+
+        <ImageView
+            android:id="@+id/characterImage"
+            android:layout_width="200dp"
+            android:layout_height="260dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/image_holder" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageCard"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:scrollbars="vertical"
+                android:paddingTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/characterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Actor Name"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/actor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="House"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/house"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Species"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/species"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ancestry"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ancestry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Eye Colour"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/eyeColour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hair Colour"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/hairColour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date Of Birth"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dateOfBirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Is Wizard?"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/isWizard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Is Hogwarts Student?"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/isHogwartsStudent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/detailViewGap"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Is Hogwarts Staff?"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/isHogwartsStaff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Is Alive?"
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textSize="@dimen/labelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/isAlive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textSize="@dimen/valueTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
