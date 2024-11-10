@@ -29,7 +29,7 @@ This Android app was built to learn Android development and get familiar with **
 
 You can download the APK and install it directly on your Android device from the link below:
 
-[Download APK](app/release/app-release.apk)
+[Download APK](https://github.com/sarfarajansari/harry-potter-characters/raw/refs/heads/main/app/release/app-release.apk)
 
 ## Conclusion
 
